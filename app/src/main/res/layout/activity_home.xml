@@ -30,18 +30,6 @@
             android:layout_width="match_parent"
             android:layout_height="8dp" />
 
-        <EditText
-            android:id="@+id/providerInput"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:ems="10"
-            android:hint="Provider"
-            android:inputType="textPassword" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="8dp" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

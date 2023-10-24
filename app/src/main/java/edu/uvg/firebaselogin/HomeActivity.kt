@@ -12,13 +12,15 @@ enum class ProviderType {
 
 class HomeActivity : AppCompatActivity() {
 
-    var emailTextView : TextView = findViewById(R.id.emailRegister)
-    var providerTextView : TextView = findViewById(R.id.providerInput)
-    var logoutBtn : Button = findViewById(R.id.logOutBtn)
+    private lateinit var emailTextView : TextView
+    private lateinit var logoutBtn : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        emailTextView = findViewById(R.id.emailRegister)
+        logoutBtn = findViewById(R.id.logOutBtn)
 
         val bundle = intent.extras
         val email = bundle?.getString("email")
@@ -29,7 +31,7 @@ class HomeActivity : AppCompatActivity() {
     private fun setup( email : String, provider : String) {
         title = "Home"
         emailTextView.text = email
-        providerTextView.text = provider
+        //providerTextView.text = provider
 
         logoutBtn.setOnClickListener{
             FirebaseAuth.getInstance().signOut()
